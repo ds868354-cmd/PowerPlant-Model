@@ -1,0 +1,18 @@
+description: 'Generated for THIS dataset by Final_universal_automl_pipeline fixed-150
+  (column names only, no values). Not read automatically: rename it to domain_config.yaml
+  to reuse it; the `dataset:` block makes a run on a different dataset ignore it.
+  Findings: domain_config_report.json.'
+dataset:
+  n_columns: 5
+  columns_sha256: f3e3bfb836823e631bce61eb75d12d5c7e7c79a8f1873672a1987ef659148eea
+  columns:
+  - AP
+  - AT
+  - PE
+  - RH
+  - V
+domain:
+  industry: auto
+  auto_drop_sensitive: true
+  keep_sensitive_columns: []
+  extra_sensitive_columns: []

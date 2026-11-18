@@ -1,0 +1,29 @@
+{
+  "cpu_cores": 2,
+  "cpu_vendor": "Intel",
+  "ram_total_gb": 13.605818368,
+  "ram_available_gb": 10.99190272,
+  "cuda": {
+    "available": true,
+    "count": 1,
+    "devices": [
+      {
+        "name": "Tesla T4",
+        "vram_gb": 15.6
+      }
+    ],
+    "source": "torch",
+    "torch_usable": true
+  },
+  "tpu": {
+    "available": false,
+    "device_count": 0,
+    "reason": "no TPU environment hints found"
+  },
+  "mps": false,
+  "deep_device": "cuda",
+  "booster_gpu": {
+    "xgboost": true
+  },
+  "notes": []
+}

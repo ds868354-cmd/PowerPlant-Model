@@ -1,0 +1,45 @@
+{
+  "name": "dataset.csv",
+  "model_type": "TABULAR_ML",
+  "task": "regression",
+  "source_url": "https://uci.edu",
+  "license": "CC BY 4.0",
+  "collection_method": "Collected from a Combined Cycle Power Plant over 6 years (2006-2011) when the plant was set to work with full load (UCI ML Repository).",
+  "known_limitations": "Historical sensor readings from a specific power plant; intended for demonstration and educational purposes only.",
+  "complete": true,
+  "missing_fields": [],
+  "defaulted_fields": [
+    "source_url",
+    "license",
+    "collection_method",
+    "known_limitations"
+  ],
+  "field_sources": {
+    "source_url": "default",
+    "license": "default",
+    "collection_method": "default",
+    "known_limitations": "default"
+  },
+  "needs_owner_confirmation": false,
+  "metadata_file": null,
+  "n_rows_used": 9527,
+  "n_test_rows": 1906,
+  "class_distribution": null,
+  "dropped_columns": {},
+  "audit_findings": [],
+  "sensitive_features": [],
+  "sensitive_reviewed": {},
+  "sensitive_scan": {},
+  "sensitive_review_source": {},
+  "business_justified": {},
+  "sensitive_features_dropped": [],
+  "fairness_disparity": [],
+  "fairness_check_status": "NOT_APPLICABLE",
+  "fairness_review_pending": [],
+  "dropped_columns_category": {},
+  "unspecified_fields": [
+    "source_url",
+    "license",
+    "collection_method"
+  ]
+}

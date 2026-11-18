@@ -1,0 +1,38 @@
+{
+  "generated_utc": "2026-11-18T12:02:02Z",
+  "model_type": "TABULAR_ML",
+  "domain_config": {
+    "path": "/content/domain_config.yaml",
+    "sha256": "1fde5eb0d221966431c5f4d025f531f668ab35093f734b23785d0cdf822a85e3",
+    "domains": [
+      "legal_judiciary"
+    ],
+    "warnings": []
+  },
+  "drop_sensitive_features": {
+    "value": true,
+    "source": "domain_config (/content/domain_config.yaml)"
+  },
+  "industry": {
+    "mode": "explicit",
+    "detected": null,
+    "active_domains": [
+      "legal_judiciary"
+    ],
+    "auto_drop_sensitive": true
+  },
+  "dropped_detail": [],
+  "retained_by_keep_sensitive_columns": [],
+  "domain_config_routing": {
+    "model_type": "TABULAR_ML",
+    "mode": "full",
+    "applied": true,
+    "note": null
+  },
+  "dropped_before_training": {},
+  "sensitive_columns_in_model": {},
+  "status": {},
+  "business_justified": {},
+  "fairness_reviews": {},
+  "fairness_disparity": []
+}

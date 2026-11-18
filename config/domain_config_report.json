@@ -1,0 +1,27 @@
+{
+  "model": {
+    "type": "TABULAR_ML",
+    "task": "regression",
+    "target_col": "PE"
+  },
+  "industry": {
+    "applied": null,
+    "confidence": null,
+    "detected": false,
+    "evidence": [],
+    "active_domains": [
+      "legal_judiciary"
+    ]
+  },
+  "sensitive_columns_found": {},
+  "sensitive_columns_dropped": [],
+  "target_bounds": {
+    "min": 420.260009765625,
+    "max": 495.760009765625,
+    "floor": 0.0,
+    "ceiling": null,
+    "source": "detected"
+  },
+  "language": null,
+  "applied_domain_config_file": "/content/domain_config.yaml"
+}
