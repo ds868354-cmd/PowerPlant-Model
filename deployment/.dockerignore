@@ -20,6 +20,10 @@
 # --- artifact folders, copied whole (sharded weights, tokenizer / config files, LoRA adapters, saved embedders) ---
 !artifacts
 !artifacts/**
+!src/
+!src/**
+!config/
+!config/**
 !llm_lora_adapter
 !llm_lora_adapter/**
 !llm_base_model
