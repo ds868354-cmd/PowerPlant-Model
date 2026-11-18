@@ -58,3 +58,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=120s \
 # PID 1 so SIGTERM from docker/k8s shuts it down gracefully.
 # --no-server-header: do not advertise the uvicorn version to scanners; --timeout-keep-alive 5 frees idle connections quickly (slow-client DoS).
 CMD ["sh", "-c", "exec uvicorn app:app --host 0.0.0.0 --port $PORT --no-server-header --timeout-keep-alive 5"]
+CMD ["sh", "-c", "exec uvicorn src.app:app --host 0.0.0.0 --port $PORT --no-server-header --timeout-keep-alive 5"]

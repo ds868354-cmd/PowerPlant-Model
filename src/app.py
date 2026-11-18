@@ -59,6 +59,7 @@ def _artifact_roots():
     """Directories searched for artifacts: the bundle directory, then its artifacts/ sub-folder. The Dockerfile copies the whole
     (allow-listed) build context, so a flat bundle and one that keeps its weights under artifacts/ both work."""
     return (_BUNDLE_DIR, os.path.join(_BUNDLE_DIR, "artifacts"))
+    return (_BUNDLE_DIR, os.path.join(_BUNDLE_DIR, "artifacts"), os.path.abspath(os.path.join(_BUNDLE_DIR, "..", "config")))
 
 
 def _resolve_bundle_path(name, default=None):
