@@ -1,0 +1,198 @@
+{
+  "target_col": "PE",
+  "task": "regression",
+  "model_family": "TABULAR_ML",
+  "numeric_cols": [
+    "AT",
+    "V",
+    "AP",
+    "RH"
+  ],
+  "categorical_cols": [],
+  "feature_names": [
+    "AT",
+    "V",
+    "AP",
+    "RH"
+  ],
+  "class_names": null,
+  "impute_medians": [
+    20.31999969482422,
+    51.86000061035156,
+    1012.969970703125,
+    75.06999969482422
+  ],
+  "outlier_bounds": [
+    {
+      "lower": 2.640000104904175,
+      "upper": 61.98000144958496
+    },
+    {
+      "lower": 25.360000610351562,
+      "upper": 140.93999862670898
+    },
+    {
+      "lower": 992.8900146484375,
+      "upper": 1041.4700927734375
+    },
+    {
+      "lower": 25.889999389648438,
+      "upper": 148.9099884033203
+    }
+  ],
+  "scale_recipe": {
+    "method": "standard",
+    "mean_": [
+      19.676623067498515,
+      54.301406617928535,
+      1013.2640055082258,
+      73.42690407428938
+    ],
+    "scale_": [
+      7.4071703498830255,
+      12.724336820978216,
+      5.912189952143231,
+      14.578643652827761
+    ]
+  },
+  "encode_recipe": {
+    "categorical_cols": [],
+    "encoders": {}
+  },
+  "custom_formulas": null,
+  "smote_applied": false,
+  "applied_pipeline_steps": [
+    {
+      "step": "FeatureExpansion",
+      "params": {
+        "derived_columns": [],
+        "onehot_columns": []
+      }
+    },
+    {
+      "step": "Imputation",
+      "params": {
+        "method": "median",
+        "columns": [
+          "AT",
+          "V",
+          "AP",
+          "RH"
+        ],
+        "medians": [
+          20.31999969482422,
+          51.86000061035156,
+          1012.969970703125,
+          75.06999969482422
+        ]
+      }
+    },
+    {
+      "step": "WinsorizeCaps",
+      "params": {
+        "factor": 3.0,
+        "bounds": [
+          {
+            "lower": 2.640000104904175,
+            "upper": 61.98000144958496
+          },
+          {
+            "lower": 25.360000610351562,
+            "upper": 140.93999862670898
+          },
+          {
+            "lower": 992.8900146484375,
+            "upper": 1041.4700927734375
+          },
+          {
+            "lower": 25.889999389648438,
+            "upper": 148.9099884033203
+          }
+        ]
+      }
+    },
+    {
+      "step": "Scaling",
+      "params": {
+        "method": "standard"
+      }
+    }
+  ],
+  "feature_expansion_report": {
+    "numeric": [
+      {
+        "col": "AT",
+        "variance": 54.866173,
+        "skew": -0.132633,
+        "min": 2.64,
+        "n_unique": 2497,
+        "abs_corr": 0.944076,
+        "log1p_candidate": false,
+        "high_impact": true
+      },
+      {
+        "col": "V",
+        "variance": 161.908748,
+        "skew": 0.208933,
+        "min": 25.360001,
+        "n_unique": 621,
+        "abs_corr": 0.884511,
+        "log1p_candidate": false,
+        "high_impact": true
+      },
+      {
+        "col": "AP",
+        "variance": 34.95399,
+        "skew": 0.283538,
+        "min": 992.890015,
+        "n_unique": 2231,
+        "abs_corr": 0.546885,
+        "log1p_candidate": false,
+        "high_impact": true
+      },
+      {
+        "col": "RH",
+        "variance": 212.536851,
+        "skew": -0.455716,
+        "min": 25.889999,
+        "n_unique": 3685,
+        "abs_corr": 0.382387,
+        "log1p_candidate": false,
+        "high_impact": true
+      }
+    ],
+    "log1p_columns": [],
+    "high_impact_numeric": [
+      "AT",
+      "V",
+      "AP",
+      "RH"
+    ],
+    "ordinal_columns": [],
+    "target_encoded_columns": [],
+    "frequency_encoded_columns": [],
+    "onehot_columns": [],
+    "skipped_columns": []
+  },
+  "robust_objective": {
+    "enabled": true,
+    "task": "regression",
+    "objective": "huber",
+    "huber_delta": 27.68805632,
+    "robust_sigma_mad": 20.58591548
+  },
+  "ingestion_mode_context": "json_array",
+  "log_transform_target": false,
+  "log_target_pad_frac": 0.0,
+  "target_bounds": {
+    "min": 420.260009765625,
+    "max": 495.760009765625,
+    "floor": 0.0,
+    "ceiling": null,
+    "source": "detected"
+  },
+  "weighted_least_squares": {
+    "applied": false,
+    "reason": "not a regression task or weighted_least_squares=False"
+  }
+}
