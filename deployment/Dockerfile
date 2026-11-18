@@ -34,6 +34,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Credentials are NEVER in a layer: mount api_keys.json at run time (k8s Secret volume / `docker run -v`, then API_KEYS_PATH) or inject
 # the same JSON as the API_KEYS_JSON environment variable.
 COPY --chown=appuser:appuser . ./
+COPY --chown=appuser:appuser config/ config/
+COPY --chown=appuser:appuser src/ src/
 
 # [PORT FIX] ONE source of truth: PORT is used by EXPOSE, HEALTHCHECK and uvicorn below, so the exposed port
 # can never differ from the port the server actually binds. k8s.yaml sets the same PORT for the container.
